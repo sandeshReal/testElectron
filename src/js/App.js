@@ -163,7 +163,7 @@ const handleUpdateModule=()=>{
             <div className="btn-list">
               <MdBrowserUpdated className="btn-list-icon" />
             </div>
-            {showBtnTxt==='updatedropbox' &&<span className="btn-hover-text">UPDATE FROM DROPBOX</span>}
+            {showBtnTxt==='updatedropbox' &&<span className="btn-hover-text">UPDATE</span>}
           <span className="btn-list-text">UPDATE FROM DROPBOX</span>
           </div>
           
