@@ -9,7 +9,7 @@ jobs:
       contents: write
       issues: write
       pull-requests: write
-    runs-on: macos-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js
@@ -23,8 +23,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Make macOS release
-        run: npm run make:macos
+      - name: Make Windows release
+        run: npm run make:win
 
       - name: Semantic Release
         run: npx semantic-release
