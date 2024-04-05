@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main-container {
+    .main-container-header{
+        font-size: 0.7rem;
+        text-align: center;
+        margin-top: 0.5rem;
+        color:gray;
+        letter-spacing: 0.03rem;
+        @media screen and (min-width:400px) {
+          font-size: 1rem;
+        }
+    }
+  .btn-lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .btn-list-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:1rem;
+     cursor: pointer;
+      .btn-list {
+        border: none;
+        background-color: #0294bc;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        border:1px solid transparent;
+        transition:all 0.2s ease-in-out;
+        &:hover{
+            background-color: #fff;
+            color:#0294bc;
+            border:1px solid #0294bc;
+        }
+        .btn-list-icon{
+            font-size: 20px;
+           
+        }
+      }
+    
+      .btn-list-text{
+        margin-top:0.5rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.03rem;
+        display: none;
+        @media screen and (min-width:400px){
+          display:inline;
+        }
+      }
+      .btn-hover-text{
+        position: absolute;
+        left:-65px;
+       font-size:0.6rem;
+       width:200%;
+        text-align: center;
+        background-color: rgba(0,0,0,0.5);
+        color:#fff;
+        border-radius: 5px;
+        padding:0.3rem 0;
+
+        @media screen and (min-width:400px){
+          display:none;
+        }
+      }
+    }
+  }
+  .btn-lists.flex-row{
+    flex-direction: row;
+    .btn-upper{
+        margin-right: 2rem;
+      }
+  }
+}
+
+@import url(./_ShowPath.scss);
+@import url(./_ErrorModule.scss);
+@import url(./_UpdateModule.scss);
+@import url(./_UpdateIcon.scss);
