@@ -10,5 +10,4 @@ const config = {
       '@semantic-release/github'
     ]
   };
-  
   module.exports = config;
