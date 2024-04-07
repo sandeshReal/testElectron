@@ -22,7 +22,13 @@ jobs:
 
       - name: Build project
         run: npm run build 
-
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: path/to/SteelPros-Setup-7.0.0.exe.blockmap
+          asset_name: SteelPros-Setup-7.0.0-${{ github.run_number }}.exe.blockmap  # Unique name
+          asset_content_type: application/octet-stream
       - name: Make Windows release
         run: npm run make:win -- -p always
         env:
