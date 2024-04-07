@@ -1,8 +1,8 @@
-version: 1.0.0
+version: 4.0.0
 files:
-  - url: SteelPros-Setup-1.0.0.exe
-    sha512: wjs+nfS0mB92Vgy0bsL5iaWxAgqhVq9jUVouJdNvzDp8T2OxdS8DA3oARZ3Pyp7rtveF9nCeO63gK1mZYjiXJg==
-    size: 98388525
-path: SteelPros-Setup-1.0.0.exe
-sha512: wjs+nfS0mB92Vgy0bsL5iaWxAgqhVq9jUVouJdNvzDp8T2OxdS8DA3oARZ3Pyp7rtveF9nCeO63gK1mZYjiXJg==
-releaseDate: '2024-04-07T05:44:52.567Z'
+  - url: SteelPros-Setup-4.0.0.exe
+    sha512: xTXRQVc74dNeP4vsFZhyNiyYnRNN0pU2UmUJq9L2P2bL+1KX4YIQdF6JjvgOWN3bC2z2H48m+paXJ5+ZsDFJCA==
+    size: 98388536
+path: SteelPros-Setup-4.0.0.exe
+sha512: xTXRQVc74dNeP4vsFZhyNiyYnRNN0pU2UmUJq9L2P2bL+1KX4YIQdF6JjvgOWN3bC2z2H48m+paXJ5+ZsDFJCA==
+releaseDate: '2024-04-07T05:48:55.954Z'
