@@ -29,15 +29,7 @@
   "build": {
     "productName": "SteelPros",
     "appId": "com.mbsn.steelpros",
-    "files": [
-      "build/**/*",
-      "index.html",
-      "main.js",
-      "mainPreload.js",
-      "global.js",
-      "assets/**/*",
-      "dist/**/*.{js,css,html,ttf,yaml,exe,blockmap}"
-    ],
+   
     "mac": {
       "category": "public.app-category.developer-tools",
       "icon": "assets/images/layers.png",
