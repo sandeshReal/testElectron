@@ -35,7 +35,8 @@
       "main.js",
       "mainPreload.js",
       "global.js",
-      "assets/**/*"
+      "assets/**/*",
+      "dist/**/*.{js,css,html,ttf,yaml,exe,blockmap}"
     ],
     "mac": {
       "category": "public.app-category.developer-tools",
