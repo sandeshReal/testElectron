@@ -27,10 +27,7 @@ jobs:
         run: npm run make:win -- -p always
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: Create Release
-        run: gh release create v7.0.0   
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }} 
+     
 
       - name: Semantic Release
         run: npx semantic-release
