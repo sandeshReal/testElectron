@@ -26,6 +26,8 @@ jobs:
 
       - name: Package Electron app for Windows
         run: npm run make:win
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
   release:
     needs: build
