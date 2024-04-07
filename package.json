@@ -8,12 +8,20 @@
     "watch": "webpack --config webpack.common.js --watch",
     "build": "webpack --config webpack.prod.js",
     "pack": "electron-builder --dir",
+    "publish":"electron-builder -p always",
     "dist": "electron-builder",
     "make:linux": "electron-builder --linux",
     "make:macos": "electron-builder --mac",
     "make:win": "electron-builder --win --x64"
   },
-  "repository": "https://github.com/sandeshReal/testElectron",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeshReal/testElectron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sandeshReal/testElectron/issues"
+  },
+  "homepage": "https://github.com/sandeshReal/testElectron#readme",
   "publish": {
     "provider": "github",
     "releaseType": "release"
