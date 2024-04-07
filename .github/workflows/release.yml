@@ -35,7 +35,7 @@ jobs:
         run: npm run build 
 
       - name: Make Windows release
-        run: npm run make
+        run: npm run make:win
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
      
