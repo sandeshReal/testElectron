@@ -44,7 +44,7 @@ const App = () => {
     setMessage(message);
  
   });
-  // const [errorMsg,setErrorMsg]=useState('');
+  
   useEffect(()=>{
     window.bridge.trigerMain();
     window.bridge.trigerSelectedFile( (event, data) => {
