@@ -1,10 +1,9 @@
-name: Release Electron App
+name: Release
 
 on:
   push:
     branches:
-      - main  # Adjust to your main branch name
-  workflow_dispatch:
+      - main
 
 jobs:
   build:
@@ -13,25 +12,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 20  # Adjust to your Node.js version
+          node-version: 14
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Electron app
+      - name: Build project
         run: npm run build
 
-      - name: Package Electron app for Windows
-        run: npm run make:win
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
-  release:
-    needs: build
+  publish:
     runs-on: windows-latest
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'  # Condition to trigger only on main branch pushes
     steps:
       - name: Create Release
         id: create_release
@@ -39,17 +34,17 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
-          tag_name: v${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
+          tag_name: v1.0.0  # Adjust to a specific version/tag if needed
+          release_name: Release v1.0.0
           draft: false
           prerelease: false
 
-      - name: Upload Windows Setup File
+      - name: Upload latest.yml
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/*  # Assuming your setup file is in the "dist" directory
-          asset_name: SteelPros-Setup-v${{ github.run_number }}.exe
-          asset_content_type: application/octet-stream
+          asset_path: path/to/latest.yml  # Adjust to the path of your latest.yml file
+          asset_name: latest.yml
+          asset_content_type: application/yaml  # Adjust content type as needed
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
