@@ -63,7 +63,7 @@ const App = () => {
       // ipcRenderer.send("increaseSize",window.innerWidth);
     } else {
       window.bridge.defaultSize(window.innerWidth);
-      // ipcRenderer.send("defaultSize",window.innerWidth);
+    
     }
   }, [path]);
 
