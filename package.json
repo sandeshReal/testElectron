@@ -16,21 +16,17 @@
     "make:macos": "electron-builder --mac",
     "make:win": "electron-builder --win --x64"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sandeshReal/testElectron.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sandeshReal/testElectron/issues"
-  },
-  "homepage": "https://github.com/sandeshReal/testElectron#readme",
-  "publish": {
-    "provider": "github",
-    "releaseType": "release"
-  },
   "build": {
     "productName": "SteelPros",
     "appId": "com.mbsn.steelpros",
+    "files": [
+      "build/**/*",
+      "assets/**/*",
+      "index.html",
+      "global.js",
+      "main.js",
+      "mainPreload.js"
+    ],
     "mac": {
       "category": "public.app-category.developer-tools",
       "icon": "assets/images/layers.png",
@@ -76,6 +72,7 @@
     "css-loader": "^6.10.0",
     "electron-updater": "^6.1.8",
     "ini": "^4.1.2",
+    "jszip": "^3.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",

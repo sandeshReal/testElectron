@@ -13,7 +13,7 @@ const UpdateModule = ({restartAppToUpdate,checkUpdate,downLoadUpdate,showUpdateB
     
       <div className="update-message">
       <span className="updateModuleCloseBtn" onClick={onUpdateMsgOpner}>
-        <IoMdCloseCircle />
+        <IoMdCloseCircle /> 
       </span>
         <p className="update-message-body">{msg}</p>
         {okDownload && <button className="download-upload-btn" onClick={downLoadUpdate}>Download Upload</button>}
